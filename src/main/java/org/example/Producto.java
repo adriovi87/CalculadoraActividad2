@@ -22,8 +22,6 @@ package org.example;
 
 public class Producto {
 
-    private int multiplicacion;
-
     /**
      * Calcula el producto de dos números reales
      *
@@ -32,9 +30,9 @@ public class Producto {
      * @return el producto multiplicador y multiplicando
      * @throws IllegalArgumentException si alguno de los números es negativo
      */
-    public static double multiplicar(double multiplicando, double multiplicador) {
+    public double multiplicar(double multiplicando, double multiplicador) {
         if (multiplicando < 0 || multiplicador < 0) {
-            throw new IllegalArgumentException("No se permiten números negativos en esta calculadora");
+            throw new IllegalArgumentException("No se permiten números negativos");
         }
         return multiplicando * multiplicador;
     }
@@ -48,7 +46,7 @@ public class Producto {
      * @throws IllegalArgumentException si alguno de los números es negativo
      * @throws ArithmeticException si el valor máximo de int se sobrepasa
      */
-    public static int multiplicar(int multiplicando, int multiplicador) {
+    public int multiplicar(int multiplicando, int multiplicador) {
         if (multiplicando < 0 || multiplicador < 0)
             throw new IllegalArgumentException("No se permiten números negativos");
 
@@ -57,7 +55,7 @@ public class Producto {
         if(multiplicacion > Integer.MAX_VALUE)
             throw new ArithmeticException("Valor de int sobrepasado: multiplicación inválida");
 
-        return (int) multiplicacion; //casting a int posible, devuelve el resultado
+         return (int) multiplicacion; //casting a int posible, devuelve el resultado
     }
 
     /**
@@ -69,7 +67,7 @@ public class Producto {
      * @return producto de los factores de la multiplicación
      * @throws IllegalArgumentException si alguno de los números es negativo
      */
-    public static double multiplicar(double multiplicando, double multiplicador1, double multiplicador2) {
+    public double multiplicar(double multiplicando, double multiplicador1, double multiplicador2) {
         if(multiplicando < 0 || multiplicador1 < 0 || multiplicador2 < 0)
             throw new IllegalArgumentException("No se permiten números negativos");
 
@@ -84,7 +82,7 @@ public class Producto {
      * @return resultado de la potencia
      * @throws IllegalArgumentException Si la base o el exponente son negativos
      */
-    public static double potencia(double base, double exponente) {
+    public double potencia(double base, double exponente) {
         if(base < 0 || exponente < 0)
            throw new IllegalArgumentException("No se permiten números negativos");
 
