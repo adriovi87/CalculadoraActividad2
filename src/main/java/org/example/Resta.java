@@ -18,10 +18,13 @@ public class Resta {
      * @param a Número real al que se le resta
      * @param b Número real que restamos
      * @return El resultado de la resta de a - b
+     * @throws IllegalArgumentException si alguno de los números es negativo
      */
     public double restarReales(double a, double b) {
-        double resultado = a - b;
-        return resultado;
+        if (a<0 || b<0) {
+            throw new IllegalArgumentException("Los números no pueden ser negativos");
+        }
+        return a-b;
     }
 
     /**
@@ -31,8 +34,10 @@ public class Resta {
      * @return El resultado de la resta de a - b
      */
     public int restarEnteros(int a, int b) {
-        int resultado = a - b;
-        return resultado;
+        if (a<0 || b<0) {
+            throw new IllegalArgumentException("Los números no pueden ser negativos");
+        }
+        return a-b;
     }
 
     /**
@@ -43,8 +48,10 @@ public class Resta {
      * @return El resultado de la resta de a - b - c
      */
     public double restaTresReales(double a, double b, double c) {
-        double resultado = a-b-c;
-        return resultado;
+        if (a < 0 || b < 0 || c < 0) {
+            throw new IllegalArgumentException("Los números no pueden ser negativos");
+        }
+        return a - b - c;
     }
 
     /**
@@ -53,6 +60,9 @@ public class Resta {
      */
 
     public void restarAcumulado(double numero) {
+        if (numero < 0) {
+            throw new IllegalArgumentException("El número inicial no puede ser negativos");
+        }
         this.valorAcumulado -= numero;
     }
 
@@ -62,8 +72,7 @@ public class Resta {
      */
     public double resultadoValorAcumulado() {
         return this.valorAcumulado;
+        }
     }
 
 
-
-}
