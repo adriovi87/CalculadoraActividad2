@@ -8,9 +8,19 @@ public class Main {
         // Crear una instancia de la clase Suma
         Suma suma = new Suma();
 
-        // ✅ Pruebas con números válidos
-        System.out.println("Suma de 5 + 3 = " + suma.sumar(5, 3)); // Debe imprimir: Suma de 5 + 3 = 8
-        System.out.println("Suma de 10 + 20 = " + suma.sumar(10, 20)); // Debe imprimir: Suma de 10 + 20 = 30
+        // Pruebas con números enteros
+        System.out.println("Suma de 10 + 2 = " + suma.sumarEnteros(10, 2)); // Debe imprimir: 12
+        System.out.println("Suma de 20 + 5 = " + suma.sumarEnteros(20, 5)); // Debe imprimir: 25
 
+        // Pruebas con números reales
+        System.out.println("Suma de 1.2 + 2.3 = " + suma.sumarReales(1.2, 2.3)); // Debe imprimir: 3.5
+
+        // Pruebas con tres números reales
+        System.out.println("Suma de 1.1 + 2.1 + 3.3 = " + suma.sumarTresReales(1.1, 2.1, 3.3)); // Debe imprimir: 6.5
+
+        // Pruebas de la suma acumulada
+        System.out.println("Valor acumulado inicial: " + suma.getValorAcumulado()); // 0.0
+        System.out.println("Acumulado tras sumar 10: " + suma.sumarAcumulado(1)); // 1.0
+        System.out.println("Acumulado tras sumar 5: " + suma.sumarAcumulado(2));   // 3.0
     }
 }
