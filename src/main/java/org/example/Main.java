@@ -1,17 +1,26 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+/**
+ * Clase principal para probar la funcionalidad de la clase Suma.
+ */
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        // Crear una instancia de la clase Suma
+        Suma suma = new Suma();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        // Pruebas con números enteros
+        System.out.println("Suma de 10 + 2 = " + suma.sumarEnteros(10, 2)); // Debe imprimir: 12
+        System.out.println("Suma de 20 + 5 = " + suma.sumarEnteros(20, 5)); // Debe imprimir: 25
+
+        // Pruebas con números reales
+        System.out.println("Suma de 1.2 + 2.3 = " + suma.sumarReales(1.2, 2.3)); // Debe imprimir: 3.5
+
+        // Pruebas con tres números reales
+        System.out.println("Suma de 1.1 + 2.1 + 3.3 = " + suma.sumarTresReales(1.1, 2.1, 3.3)); // Debe imprimir: 6.5
+
+        // Pruebas de la suma acumulada
+        System.out.println("Valor acumulado inicial: " + suma.getValorAcumulado()); // 0.0
+        System.out.println("Acumulado tras sumar 10: " + suma.sumarAcumulado(1)); // 1.0
+        System.out.println("Acumulado tras sumar 5: " + suma.sumarAcumulado(2));   // 3.0
     }
 }
