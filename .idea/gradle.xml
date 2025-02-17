@@ -5,6 +5,10 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+<<<<<<< HEAD
+=======
+        <option name="gradleHome" value="" />
+>>>>>>> 66447ab1db16003ef89be848ff2f663ab9f05f91
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
