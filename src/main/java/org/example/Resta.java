@@ -10,8 +10,7 @@ package org.example;
 public class Resta {
 
      //Atributo para almacenar el valor acumulado de la resta
-
-    private double valorAcumulado = 0; // del atributo 4.
+    private static double valorAcumulado = 0; // del atributo 4.
 
     /**
      * Resta de dos números reales
@@ -20,7 +19,7 @@ public class Resta {
      * @return El resultado de la resta de a - b
      * @throws IllegalArgumentException si alguno de los números es negativo
      */
-    public double restarReales(double a, double b) {
+    public static double restarReales(double a, double b) {
         if (a<0 || b<0) {
             throw new IllegalArgumentException("Los números no pueden ser negativos");
         }
@@ -33,7 +32,7 @@ public class Resta {
      * @param b Número entero que restamos
      * @return El resultado de la resta de a - b
      */
-    public int restarEnteros(int a, int b) {
+    public static int restarEnteros(int a, int b) {
         if (a<0 || b<0) {
             throw new IllegalArgumentException("Los números no pueden ser negativos");
         }
@@ -47,7 +46,7 @@ public class Resta {
      * @param c Tercer número real
      * @return El resultado de la resta de a - b - c
      */
-    public double restaTresReales(double a, double b, double c) {
+    public static double restaTresReales(double a, double b, double c) {
         if (a < 0 || b < 0 || c < 0) {
             throw new IllegalArgumentException("Los números no pueden ser negativos");
         }
@@ -59,11 +58,12 @@ public class Resta {
      * @param numero que va a restar el valor acumulado
      */
 
-    public void restarAcumulado(double numero) {
+    public static double restarAcumulado(double numero) {
         if (numero < 0) {
             throw new IllegalArgumentException("El número inicial no puede ser negativos");
         }
-        this.valorAcumulado -= numero;
+        valorAcumulado -= numero;
+        return valorAcumulado;
     }
 
     /**
@@ -71,7 +71,7 @@ public class Resta {
      * @return El valor acumulado de las restas
      */
     public double resultadoValorAcumulado() {
-        return this.valorAcumulado;
+        return valorAcumulado;
         }
     }
 
