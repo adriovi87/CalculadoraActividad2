@@ -6,13 +6,38 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Pruebas unitarias de la clase Producto
+ *
+ * <p>Ver <a href="https://github.com/adriovi87/CalculadoraActividad2">https://github.com/adriovi87/CalculadoraActividad2</a></p>
+ *
+ * <p>Pruebas unitarias que permiten evaluar el funcionamiento de
+ * los métodos de la clase producto; tanto si se trata de números
+ * negativos como si se excede el límite de capacidad que soportan
+ * variables primitivas.</p>
+ *
+ * @author Manuel Marcote Codesido (GitHub: ManuelMarcoteC)
+ * @version 1.0
+ * @see Main
+ * @see Producto
  */
-
 class ProductoTest {
 
-    // Creación de una variable de instancia previa a la ejecución de los test
+    /**
+     * Constructor por defecto para la clase de test ProductoTest
+     */
+    public ProductoTest() {
+
+    }
+
+
+    /**
+     * Creación de una variable de instancia previa a las pruebas unitarias
+     */
     private Producto producto;
 
+    /**
+     * Generación de un objeto de la clase Producto antes de
+     * cada prueba unitaria.
+     */
     @BeforeEach
     void setUp() {
         producto = new Producto();
