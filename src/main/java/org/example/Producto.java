@@ -1,26 +1,38 @@
 package org.example;
 
 /**
- * <h1>Elaboración Clase Producto</h1>
- * <pre>
+ * Operaciones de Producto
+ *<p>Ver <a href="https://github.com/adriovi87/CalculadoraActividad2">https://github.com/adriovi87/CalculadoraActividad2</a></p>
+ * <p>
  * Esta clase implementa los métodos relacionados con la multiplicación de la actividad.
- * Los métodos que se han incluido son: multiplicar dos números reales, dos números enteros,
- * tres números y cálculo de la potencia.
+ * Los métodos que se han incluido son:</p>
+ * <ul>
+ * <li>Multiplicación de dos números reales</li>
+ * <li>Multiplicación de dos números enteros</li>
+ * <li>Multiplicación de tres números reales</li>
+ * <li>Potencia</li>
+ * </ul>
  *
- * </pre>
  * <p>Ejemplo de uso:</p>
- * <pre>{@code
- * Producto producto = new Producto();
- * producto.multiplicar(4, 6)
- * System.out.println("4 x 6= " + producto)
+ *
+ *  <pre>{@code
+ *  Producto producto = new Producto();
+ *  producto.multiplicar(4, 6)
+ *  System.out.println("4 x 6= " + producto)
  * }</pre>
  *
- * @author Manuel Marcote Codesido
+ * @author Manuel Marcote Codesido (GitHub: ManuelMarcoteC)
  * @version 1.0
  * @see Main
  */
-
 public class Producto {
+
+    /**
+     * Constructor por defecto para la clase de Producto
+     */
+    public Producto() {
+    }
+
 
     /**
      * Calcula el producto de dos números reales

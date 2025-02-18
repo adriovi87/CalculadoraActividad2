@@ -1,15 +1,50 @@
 package org.example;
 
 import java.util.Scanner;
-
+/**
+ * Menú funcional de calculadora
+ * <p>Ver <a href="https://github.com/adriovi87/CalculadoraActividad2">https://github.com/adriovi87/CalculadoraActividad2</a></p>
+ * <p>Desde esta clase se permite lanzar una calculadora funcional desde
+ * consola que permite realizar las siguientes operaciones: </p>
+ * <ul>
+ *  <li>Suma</li>
+ *  <li>Resta</li>
+ *  <li>Multiplicación</li>
+ *  <li>División</li>
+ * </ul>
+ *
+ * @author Manuel Marcote Codesido (GitHub: ManuelMarcoteC)
+ * @version 1.0
+ *
+ * //@see Suma
+ * //@see Resta
+ * @see Producto
+ * //@see Cociente
+ */
 public class Main {
+    /**
+     * Implementación de un scanner como instancia de clase debido
+     * a su uso recursivo
+     */
     private static final Scanner scanner = new Scanner(System.in);
 
+    /**
+     * Inicialización de la calculadora
+     * @param args Menú de la calculadora con sus diferentes operaciones
+     */
     public static void main(String[] args) {
         menuCalculadora();
         scanner.close();
     }
-  
+
+    /**
+     * Muestra el menú principal de la calculadora y gestiona la selección de opciones.
+     * <p>
+     * El menú permite elegir entre operaciones de suma, resta, producto y cociente,
+     * o salir de la aplicación. Se utiliza un bucle {@code do-while} para que el menú
+     * se muestre repetidamente hasta que se elija la opción de salir.
+     * </p>
+     */
     private static void menuCalculadora() {
         int opcion;
 
@@ -62,6 +97,27 @@ public class Main {
 
     }
 
+    /**
+     * Muestra el menú de producto y gestiona las operaciones relacionadas.
+     * <p>
+     * El menú de producto ofrece las siguientes opciones:
+     * </p>
+     *
+     * <ul>
+     *   <li>Producto de dos números reales.</li>
+     *   <li>Producto de dos números enteros.</li>
+     *   <li>Producto de tres números reales.</li>
+     *   <li>Cálculo de una potencia.</li>
+     *   <li>Volver al menú principal.</li>
+     * </ul>
+     *
+     *
+     * <p>
+     * Se utiliza un bucle para repetir el menú hasta que se elija la opción de volver
+     * al menú principal
+     * </p>
+     *
+     */
     private static void menuProducto() {
 
         int opcion3;
@@ -148,10 +204,20 @@ public class Main {
             }
 
         } while (opcion3 != 5);
-      
 
-      private static void menuCociente() {
-      
-      }
+
+
+    }
+
+    private static void menuCociente() {
+
+
+    }
+
+    /**
+     * Constructor por defecto para la clase Main
+     */
+    public Main() {
+    }
 
 }
