@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" languageLevel="JDK_23" project-jdk-name="23" project-jdk-type="JavaSDK" />
 =======
   <component name="FrameworkDetectionExcludesConfiguration">
@@ -11,4 +12,10 @@
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 >>>>>>> 66447ab1db16003ef89be848ff2f663ab9f05f91
+=======
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_23" default="true" project-jdk-name="openjdk-23" project-jdk-type="JavaSDK" />
+>>>>>>> efba4b4 (Añado el menu cociente al main)
 </project>

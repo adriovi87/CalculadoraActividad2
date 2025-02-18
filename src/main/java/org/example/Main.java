@@ -209,9 +209,115 @@ public class Main {
 
     }
 
+<<<<<<< HEAD
     private static void menuCociente() {
 
 
+=======
+    /**
+     * Muestra el menú de cociente y gestiona las operaciones relacionadas.
+     * <p>
+     * El menú de cociente ofrece las siguientes opciones:
+     * </p>
+     *
+     * <ul>
+     *   <li>Division de dos números reales.</li>
+     *   <li>Division de dos números enteros.</li>
+     *   <li>Inverso de un numero real.</li>
+     *   <li>Raiz cuadrada de un numero real no negativo.</li>
+     *   <li>Volver al menú principal.</li>
+     * </ul>
+     *
+     *
+     * <p>
+     * Se utiliza un bucle para repetir el menú hasta que se elija la opción de volver
+     * al menú principal
+     * </p>
+     *
+     */
+    private static void menuCociente() {
+
+        int opcion4;
+
+        do {
+
+            System.out.println("\n=== Menu Cociente ===");
+            System.out.println("1. Division de dos numeros reales");
+            System.out.println("2. Division de dos numeros enteros");
+            System.out.println("3. Inverso de un numero real");
+            System.out.println("4. Raiz cuadrada de un numero real no negativo");
+            System.out.println("5. Volver al menu de calculadora");
+            System.out.print("\nMarque el numero de una de las opciones para " +
+                    "calcular un producto: ");
+            opcion4 = scanner.nextInt();
+
+            switch (opcion4) {
+
+                case 1: {
+                    System.out.print("\nIndique el dividendo real: ");
+                    double dividendo = scanner.nextDouble();
+                    System.out.print("Indique el multiplicador real: ");
+                    double divisor = scanner.nextDouble();
+
+                    Cociente cociente = new Cociente();
+                    double resultado = cociente.dividirReales(dividendo, divisor);
+                    System.out.print("El resultado es: " + resultado + "\n");
+
+                    break;
+                }
+
+                case 2: {
+                    System.out.print("\nIndique el dividendo entero: ");
+                    int dividendo = scanner.nextInt();
+                    System.out.print("Indique el divisor entero: ");
+                    int divisor = scanner.nextInt();
+
+                    Cociente cociente = new Cociente();
+                    int resultado = cociente.dividirEnteros(dividendo, divisor);
+                    System.out.print("El resultado es: " + resultado + "\n");
+
+                    break;
+
+                }
+
+                case 3: {
+                    System.out.print("\nIndique el numero que queremos invertir: ");
+                    double numero = scanner.nextDouble();
+
+
+                    Cociente cociente = new Cociente();
+                    double resultado = cociente.invertir(numero);
+                    System.out.print("El resultado es: " + resultado + "\n");
+
+                    break;
+
+                }
+
+                case 4: {
+                    System.out.print("\nIndique la base de la raiz: ");
+                    double baseRAiz = scanner.nextDouble();
+
+
+                    Cociente cociente = new Cociente();
+                    double resultado = cociente.raiz(baseRAiz);
+                    System.out.print("El resultado es: " + resultado + "\n");
+
+                    break;
+
+                }
+                case 5: {
+                    break;
+                }
+
+                default: {
+                    System.out.print("\nNO EXISTE ESE CALCULO\n");
+                    break;
+
+                }
+            }
+
+        } while (opcion4 != 5);
+>>>>>>> efba4b4 (Añado el menu cociente al main)
     }
 
     /**
@@ -220,4 +326,8 @@ public class Main {
     public Main() {
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> efba4b4 (Añado el menu cociente al main)
