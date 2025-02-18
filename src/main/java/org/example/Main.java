@@ -209,11 +209,6 @@ public class Main {
 
     }
 
-<<<<<<< HEAD
-    private static void menuCociente() {
-
-
-=======
     /**
      * Muestra el menú de cociente y gestiona las operaciones relacionadas.
      * <p>
@@ -317,7 +312,6 @@ public class Main {
             }
 
         } while (opcion4 != 5);
->>>>>>> efba4b4 (Añado el menu cociente al main)
     }
 
     /**
@@ -326,8 +320,7 @@ public class Main {
     public Main() {
     }
 
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> efba4b4 (Añado el menu cociente al main)
+
+
