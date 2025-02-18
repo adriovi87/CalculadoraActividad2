@@ -17,7 +17,7 @@ package org.example;
  *
  * @author Manuel Marcote Codesido
  * @version 1.0
- * @see
+ * @see Main
  */
 
 public class Producto {
@@ -28,12 +28,8 @@ public class Producto {
      * @param multiplicando primer número real
      * @param multiplicador segundo número real
      * @return el producto multiplicador y multiplicando
-     * @throws IllegalArgumentException si alguno de los números es negativo
      */
     public double multiplicar(double multiplicando, double multiplicador) {
-        if (multiplicando < 0 || multiplicador < 0) {
-            throw new IllegalArgumentException("No se permiten números negativos");
-        }
         return multiplicando * multiplicador;
     }
 
@@ -43,13 +39,9 @@ public class Producto {
      * @param multiplicando primer número entero
      * @param multiplicador segundo número entero
      * @return el producto de el primer y segundo número entero
-     * @throws IllegalArgumentException si alguno de los números es negativo
      * @throws ArithmeticException si el valor máximo de int se sobrepasa
      */
     public int multiplicar(int multiplicando, int multiplicador) {
-        if (multiplicando < 0 || multiplicador < 0)
-            throw new IllegalArgumentException("No se permiten números negativos");
-
         long multiplicacion = (long) multiplicando * (long) multiplicador; //casting para verificación
 
         if(multiplicacion > Integer.MAX_VALUE)
@@ -65,12 +57,8 @@ public class Producto {
      * @param multiplicador1 segundo número real
      * @param multiplicador2 tercer número real
      * @return producto de los factores de la multiplicación
-     * @throws IllegalArgumentException si alguno de los números es negativo
      */
     public double multiplicar(double multiplicando, double multiplicador1, double multiplicador2) {
-        if(multiplicando < 0 || multiplicador1 < 0 || multiplicador2 < 0)
-            throw new IllegalArgumentException("No se permiten números negativos");
-
         return multiplicando * multiplicador1 * multiplicador2;
     }
 
@@ -80,12 +68,8 @@ public class Producto {
      * @param base base de la potencia
      * @param exponente exponente al que se elevará la base
      * @return resultado de la potencia
-     * @throws IllegalArgumentException Si la base o el exponente son negativos
      */
     public double potencia(double base, double exponente) {
-        if(base < 0 || exponente < 0)
-           throw new IllegalArgumentException("No se permiten números negativos");
-
         return Math.pow(base, exponente);
     }
 }
