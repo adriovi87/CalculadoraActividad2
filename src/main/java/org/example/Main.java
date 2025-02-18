@@ -9,6 +9,7 @@ public class Main {
         menuCalculadora();
         scanner.close();
     }
+  
     private static void menuCalculadora() {
         int opcion;
 
@@ -147,12 +148,10 @@ public class Main {
             }
 
         } while (opcion3 != 5);
+      
 
+      private static void menuCociente() {
+      
+      }
 
-    }
-
-    private static void menuCociente() {
-
-
-    }
 }
