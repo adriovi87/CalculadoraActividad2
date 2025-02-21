@@ -94,7 +94,94 @@ public class Main {
     }
 
     private static void menuResta() {
+        int opcion2;
+ 
+        do {
 
+            System.out.println("\n=== Menu Resta ===");
+            System.out.println("1. Resta de dos numeros reales");
+            System.out.println("2. Resta de dos numeros enteros");
+            System.out.println("3. Resta de tres numeros reales");
+            System.out.println("4. Resta de números acumulados");
+            System.out.println("5. Volver al menu de calculadora");
+            System.out.print("\nMarque el número de una de las opciones para " +
+                    "calcular una resta: ");
+            opcion2 = scanner.nextInt();
+
+            switch (opcion2) {
+
+                case 1: {
+                    System.out.print("\nIndique el primer número real: ");
+                    double num1 = scanner.nextDouble();
+                    System.out.print("Indique el segundo número real: ");
+                    double num2 = scanner.nextDouble();
+
+                    Resta resta = new Resta();
+                    double resultado = Resta.restarReales(num1, num2);
+                    System.out.print("El resultado es: " + resultado + "\n");
+
+                    break;
+                }
+
+                case 2: {
+                    System.out.print("\nIndique el primer entero: ");
+                    int num1 = scanner.nextInt();
+                    System.out.print("Indique el segundo entero: ");
+                    int num2 = scanner.nextInt();
+
+                    Resta resta = new Resta();
+                    int resultado = Resta.restarEnteros(num1, num2);
+                    System.out.print("El resultado es: " + resultado + "\n");
+
+                    break;
+
+                }
+
+                case 3: {
+                    System.out.print("\nIndique el primer real: ");
+                    double num1 = scanner.nextDouble();
+                    System.out.print("Indique el segundo real: ");
+                    double num2 = scanner.nextDouble();
+                    System.out.print("Indique el tercer real: ");
+                    double num3 = scanner.nextDouble();
+
+                    Resta resta = new Resta();
+                    double resultado = Resta.restaTresReales(num1, num2, num3);
+                    System.out.print("El resultado es: " + resultado + "\n");
+
+                    break;
+
+                }
+
+                case 4: {
+                    System.out.print("\nIndique el primer número a restar: ");
+                    double resultado = scanner.nextDouble();
+                    double num2;
+
+                    do {
+                        System.out.print("Indique el siguiente número a restar (0 para terminar): ");
+                        num2 = scanner.nextDouble();
+                        if(num2 !=0){
+                            resultado -= num2;
+                        }
+                    } while (num2 !=0);
+                    System.out.println("El resultado final es: " + resultado);
+
+                    break;
+
+                }
+                case 5: {
+                    break;
+                }
+
+                default: {
+                    System.out.print("\nNO EXISTE ESE CALCULO\n");
+                    break;
+
+                }
+            }
+
+        } while (opcion2 != 5);
     }
 
     /**

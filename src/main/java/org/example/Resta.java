@@ -60,7 +60,7 @@ public class Resta {
 
     public static double restarAcumulado(double numero) {
         if (numero < 0) {
-            throw new IllegalArgumentException("El número inicial no puede ser negativos");
+            throw new IllegalArgumentException("El número inicial no puede ser negativo");
         }
         valorAcumulado -= numero;
         return valorAcumulado;
