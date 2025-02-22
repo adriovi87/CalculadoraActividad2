@@ -1,77 +1,86 @@
 package org.example;
 
 /**
- * Clase Suma que proporciona operaciones matemáticas básicas.
- * @author Adrián (aka adriovi87)
- * @version 1.1
+ * Clase Suma que proporciona operaciones matemáticas básicas,
+ * controlando el desbordamiento.
+ * @author Adrián
+ * @version 1.2
  */
 public class Suma {
 
-    /**
-     * Suma dos números enteros.
-     *
-     * @param a Primer número (debe ser positivo o cero).
-     * @param b Segundo número (debe ser positivo o cero).
-     * @return Resultado de la suma.
-     * @throws IllegalArgumentException si alguno de los números es negativo.
-     */
-    public int sumarEnteros(int a, int b) {
-        if (a < 0 || b < 0) {
-            throw new IllegalArgumentException("Los números no pueden ser negativos.");
-        }
-        return a + b;
-    }
-
-    /**
-     * Suma dos números reales.
-     *
-     * @param a Primer número (debe ser positivo o cero).
-     * @param b Segundo número (debe ser positivo o cero).
-     * @return Resultado de la suma.
-     * @throws IllegalArgumentException si alguno de los números es negativo.
-     */
-    public double sumarReales(double a, double b) {
-        if (a < 0 || b < 0) {
-            throw new IllegalArgumentException("Los números no pueden ser negativos.");
-        }
-        return a + b;
-    }
-
-    /**
-     * Suma tres números reales.
-     *
-     * @param a Primer número (debe ser positivo o cero).
-     * @param b Segundo número (debe ser positivo o cero).
-     * @param c Tercer número (debe ser positivo o cero).
-     * @return Resultado de la suma.
-     * @throws IllegalArgumentException si alguno de los números es negativo.
-     */
-    public double sumarTresReales(double a, double b, double c) {
-        if (a < 0 || b < 0 || c < 0) {
-            throw new IllegalArgumentException("Los números no pueden ser negativos.");
-        }
-        return a + b + c;
-    }
-
-    /**
-     * Suma un valor al acumulado.
-     *
-     * @param valor Número a sumar al acumulado (debe ser positivo o cero).
-     * @return El nuevo valor acumulado.
-     * @throws IllegalArgumentException si el número es negativo.
-     */
     private double valorAcumulado = 0;
 
-    public double sumarAcumulado(double valor) {
-        if (valor < 0) {
-            throw new IllegalArgumentException("El número no puede ser negativo.");
+    /**
+     * Suma dos números enteros con detección de desbordamiento.
+     *
+     * @param a Primer número.
+     * @param b Segundo número.
+     * @return Resultado de la suma.
+     * @throws ArithmeticException si la suma desborda el rango de int.
+     */
+    public int sumarEnteros(int a, int b) {
+        // Verificación para desbordamiento positivo:
+        if (a > 0 && b > Integer.MAX_VALUE - a) {
+            throw new ArithmeticException("Desbordamiento positivo en la suma de enteros.");
         }
-        valorAcumulado += valor;
+        // Verificación para desbordamiento negativo:
+        if (a < 0 && b < Integer.MIN_VALUE - a) {
+            throw new ArithmeticException("Desbordamiento negativo en la suma de enteros.");
+        }
+        return a + b;
+    }
+
+    /**
+     * Suma de dos números reales controlando el desbordamiento.
+     *
+     * @param a Primer número.
+     * @param b Segundo número.
+     * @return Resultado de la suma.
+     * @throws ArithmeticException si el resultado es infinito.
+     */
+    public double sumarReales(double a, double b) {
+        double resultado = a + b;
+        if (Double.isInfinite(resultado)) {
+            throw new ArithmeticException("Desbordamiento en la suma de números reales.");
+        }
+        return resultado;
+    }
+
+    /**
+     * Suma tres números reales con detección de desbordamiento.
+     *
+     * @param a Primer número.
+     * @param b Segundo número.
+     * @param c Tercer número.
+     * @return Resultado de la suma.
+     * @throws ArithmeticException si el resultado es infinito.
+     */
+    public double sumarTresReales(double a, double b, double c) {
+        double resultado = a + b + c;
+        if (Double.isInfinite(resultado)) {
+            throw new ArithmeticException("Desbordamiento en la suma de números reales.");
+        }
+        return resultado;
+    }
+
+    /**
+     * Suma un valor al acumulado y lo retorna.
+     *
+     * @param valor Número a sumar al acumulado.
+     * @return El valor acumulado.
+     * @throws ArithmeticException para resultados infinitos.
+     */
+    public double sumarAcumulado(double valor) {
+        double nuevoValor = valorAcumulado + valor;
+        if (Double.isInfinite(nuevoValor)) {
+            throw new ArithmeticException("Desbordamiento en el acumulado.");
+        }
+        valorAcumulado = nuevoValor;
         return valorAcumulado;
     }
 
     /**
-     * Calcula el valor acumulado.
+     * Obtiene el valor acumulado.
      *
      * @return El valor acumulado.
      */
@@ -79,5 +88,3 @@ public class Suma {
         return valorAcumulado;
     }
 }
-
-
