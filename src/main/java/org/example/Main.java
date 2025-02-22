@@ -12,14 +12,16 @@ import java.util.Scanner;
  *  <li>Multiplicación</li>
  *  <li>División</li>
  * </ul>
- *
+ * @author Adrián Araujo González  (GitHub: adriovi87)
+ * @author Pablo Garrido López (GitHub: Pablo-Garridolop)
  * @author Manuel Marcote Codesido (GitHub: ManuelMarcoteC)
- * @version 1.0
+ * @author Marta Guillén Escudero (GitHub: mge1905)
+ * @version 1.2
  *
- * //@see Suma
- * //@see Resta
+ * @see Suma
+ * @see Resta
  * @see Producto
- * //@see Cociente
+ * @see Cociente
  */
 public class Main {
     /**
