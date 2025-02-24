@@ -266,6 +266,27 @@ public class Main {
         } while (opcion2 != 5);
     }
 
+    /**
+     * Muestra el menú de producto y gestiona las operaciones relacionadas.
+     * <p>
+     * El menú de producto ofrece las siguientes opciones:
+     * </p>
+     *
+     * <ul>
+     *   <li>Producto de dos números reales.</li>
+     *   <li>Producto de dos números enteros.</li>
+     *   <li>Producto de tres números reales.</li>
+     *   <li>Cálculo de una potencia.</li>
+     *   <li>Volver al menú principal.</li>
+     * </ul>
+     *
+     *
+     * <p>
+     * Se utiliza un bucle para repetir el menú hasta que se elija la opción de volver
+     * al menú principal
+     * </p>
+     *
+     */
     private static void menuProducto() {
 
         int opcion3;
